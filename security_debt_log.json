@@ -1,0 +1,492 @@
+﻿[
+    {
+        "file_path":  "scanner.py",
+        "line_number":  70,
+        "defect_category":  "Injection",
+        "severity":  "High",
+        "description":  "eval() with dynamic input",
+        "detected_text":  "\"eval() called with dynamic input (Code Injection)\",",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "e80495795832"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  275,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "print() used for logging",
+        "detected_text":  "print(f\"[scanner] Severity breakdown — High: {high}, Medium: {medium}, Low: {low}\")",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "a57fd7ba96da"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  61,
+        "defect_category":  "Hardcoded Secret",
+        "severity":  "Medium",
+        "description":  "Bearer token literal",
+        "detected_text":  "\"Bearer token literal\",",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "fd18258b5f1e"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  9,
+        "defect_category":  "Hardcoded Secret",
+        "severity":  "High",
+        "description":  "Hardcoded API key/token variable",
+        "detected_text":  "SECRET_KEY = \"s3cr3t_hardcoded_key_abc123\"",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "af9485056b6b"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  31,
+        "defect_category":  "Insecure Deserialization",
+        "severity":  "High",
+        "description":  "pickle.loads() arbitrary code exec",
+        "detected_text":  "return pickle.loads(data)",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "ece0332c8a7e"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  205,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken SHA-1 hash",
+        "detected_text":  "\"_id\": hashlib.sha1(",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "f09afda3e6bb"
+    },
+    {
+        "file_path":  "sample_app/service.go",
+        "line_number":  28,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken SHA-1 hash",
+        "detected_text":  "h := sha1.New()",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "027b55bd880d"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  96,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "DES/3DES cipher (weak)",
+        "detected_text":  "r\u0027(?i)\\b(DES|3DES|TripleDES)\\b\u0027),",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "f6441ac42e33"
+    },
+    {
+        "file_path":  "sample_app/service.go",
+        "line_number":  20,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken MD5 hash",
+        "detected_text":  "// BUG: MD5 is broken — use bcrypt or argon2",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "f76192a04177"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  120,
+        "defect_category":  "Insecure Deserialization",
+        "severity":  "Medium",
+        "description":  "marshal.loads() risk",
+        "detected_text":  "\"marshal.loads() — deserialization risk\",",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "9d5604cc2652"
+    },
+    {
+        "file_path":  "sample_app/service.go",
+        "line_number":  6,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken SHA-1 hash",
+        "detected_text":  "\"crypto/sha1\"",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "bba831f6d0ff"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  159,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "print() used for logging",
+        "detected_text":  "\"print() used for logging in production code\",",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "67290ebeef45"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  44,
+        "defect_category":  "Cryptography",
+        "severity":  "Low",
+        "description":  "random used for security purpose",
+        "detected_text":  "return random.randint(100000, 999999)",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "1dc06a24aa41"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  26,
+        "defect_category":  "Injection",
+        "severity":  "High",
+        "description":  "OS command injection (shell=True)",
+        "detected_text":  "result = subprocess.run(f\"ls {user_input}\", shell=True, capture_output=True)",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "5579c9a5ccb6"
+    },
+    {
+        "file_path":  "sample_app/service.go",
+        "line_number":  5,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken MD5 hash",
+        "detected_text":  "\"crypto/md5\"",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "c275cdd7fa8f"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  13,
+        "defect_category":  "Hardcoded Secret",
+        "severity":  "High",
+        "description":  "AWS Access Key ID",
+        "detected_text":  "AWS_ACCESS_KEY = \"AKIAIOSFODNN7EXAMPLE\"",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "68a83bae73a6"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  21,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "TODO/FIXME/HACK comment",
+        "detected_text":  "# FIXME: replace with proper JWT verification",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "118b741b40b2"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  116,
+        "defect_category":  "Insecure Deserialization",
+        "severity":  "High",
+        "description":  "PyYAML unsafe yaml.load()",
+        "detected_text":  "\"PyYAML unsafe yaml.load() without Loader\",",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "a7d9eacc4c80"
+    },
+    {
+        "file_path":  "sample_app/service.go",
+        "line_number":  15,
+        "defect_category":  "Hardcoded Secret",
+        "severity":  "High",
+        "description":  "Generic password assignment",
+        "detected_text":  "DBPassword = \"password = \\\"prod-db-pass-9876\\\"\"",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "28965f174237"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  95,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "DES/3DES cipher (weak)",
+        "detected_text":  "\"DES/3DES cipher usage (weak encryption)\",",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "846ded5aa416"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  52,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "Commented-out code block",
+        "detected_text":  "# def old_login(u, p):",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "a64002d3bd27"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  8,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "TODO/FIXME/HACK comment",
+        "detected_text":  "# TODO: rotate this before production deploy",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "824db066b0cc"
+    },
+    {
+        "file_path":  "sample_app/service.go",
+        "line_number":  27,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken SHA-1 hash",
+        "detected_text":  "// SHA1 also deprecated for security",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "5aa0435088cd"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  112,
+        "defect_category":  "Insecure Deserialization",
+        "severity":  "High",
+        "description":  "pickle.loads() arbitrary code exec",
+        "detected_text":  "\"pickle.loads() called — arbitrary code execution risk\",",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "6dd379da81ee"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  39,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "TODO/FIXME/HACK comment",
+        "detected_text":  "# XXX: SQL injection risk — parameterise this query",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "a94c1b187df1"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  58,
+        "defect_category":  "Hardcoded Secret",
+        "severity":  "Medium",
+        "description":  "Connection string with credentials",
+        "detected_text":  "r\u0027(?i)(jdbc:|mongodb\\+srv?:|postgres://|mysql://)[^\"\\\u0027\u003c\\s]*:[^\"\\\u0027\u003c\\s]*@\u0027),",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "c61dfc5a8cd6"
+    },
+    {
+        "file_path":  "sample_app/api_handler.js",
+        "line_number":  30,
+        "defect_category":  "Security Misconfiguration",
+        "severity":  "Medium",
+        "description":  "Insecure HTTP endpoint",
+        "detected_text":  "const PAYMENT_URL = \"http://payment-service.internal/charge\";",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "827b37481ad4"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  92,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken SHA-1 hash",
+        "detected_text":  "r\u0027(?i)\\b(sha1|hashlib\\.sha1)\\b\u0027),",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "7ef40831fc3c"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  17,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken MD5 hash",
+        "detected_text":  "# BUG: MD5 is cryptographically broken",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "3e2437575ced"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  18,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken MD5 hash",
+        "detected_text":  "return hashlib.md5(pw.encode()).hexdigest()",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "bbbf061e9450"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  11,
+        "defect_category":  "Hardcoded Secret",
+        "severity":  "High",
+        "description":  "Generic password assignment",
+        "detected_text":  "password = \"admin1234\"",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "f01ccd681908"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  88,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken MD5 hash",
+        "detected_text":  "r\u0027(?i)\\b(md5|hashlib\\.md5)\\b\u0027),",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "5edd044058a9"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  265,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "print() used for logging",
+        "detected_text":  "print(f\"[scanner] Raw findings: {len(new_findings)}\")",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "508bb49ec5b3"
+    },
+    {
+        "file_path":  "sample_app/api_handler.js",
+        "line_number":  6,
+        "defect_category":  "Hardcoded Secret",
+        "severity":  "High",
+        "description":  "Hardcoded API key/token variable",
+        "detected_text":  "const API_TOKEN = \"ghp_AbCdEfGhIjKlMnOpQrStUvWxYz012345\";",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "9e6261fd17b5"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  10,
+        "defect_category":  "Hardcoded Secret",
+        "severity":  "High",
+        "description":  "Hardcoded API key/token variable",
+        "detected_text":  "api_key = \"sk-prod-A1B2C3D4E5F6G7H8I9J0K1L2M3N4\"",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "b39fbb49b134"
+    },
+    {
+        "file_path":  "sample_app/api_handler.js",
+        "line_number":  7,
+        "defect_category":  "Hardcoded Secret",
+        "severity":  "High",
+        "description":  "Generic password assignment",
+        "detected_text":  "const DB_PASSWORD = \"password = \u0027superSecret99\u0027\";",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "cd0bcbe034ef"
+    },
+    {
+        "file_path":  "run_pipeline.sh",
+        "line_number":  39,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "print() used for logging",
+        "detected_text":  "RECORD_COUNT=$(python3 -c \"import json; d=json.load(open(\u0027$DB_FILE\u0027)); print(len(d))\" 2\u003e/dev/null || echo \"?\")",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "771a4d349e75"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  171,
+        "defect_category":  "Deprecated API",
+        "severity":  "Medium",
+        "description":  "Deprecated os.popen (use subprocess)",
+        "detected_text":  "\"Use of deprecated os.popen (use subprocess)\",",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "d3636dde7c2c"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  53,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "Commented-out code block",
+        "detected_text":  "#     return check_db(u, p)",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "404694e58679"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  276,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "print() used for logging",
+        "detected_text":  "print(f\"[scanner] Database updated → {DB_FILE}  (total records: {len(merged)})\")",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "9723bf1e2979"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  262,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "print() used for logging",
+        "detected_text":  "print(f\"[scanner] Scanning: {Path(scan_root).resolve()}\")",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "1be1c98186ab"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  35,
+        "defect_category":  "Insecure Deserialization",
+        "severity":  "High",
+        "description":  "PyYAML unsafe yaml.load()",
+        "detected_text":  "return yaml.load(stream)",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "70419c2b36ac"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  87,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken MD5 hash",
+        "detected_text":  "\"Use of broken MD5 hash function\",",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "0a3a1dd7b20f"
+    },
+    {
+        "file_path":  "scanner.py",
+        "line_number":  104,
+        "defect_category":  "Cryptography",
+        "severity":  "Medium",
+        "description":  "ECB mode (no IV randomness)",
+        "detected_text":  "r\u0027(?i)(\\.encrypt\\s*\\(|MODE_ECB|AES\\.MODE_ECB)\u0027),",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "8885064c287c"
+    },
+    {
+        "file_path":  "sample_app/api_handler.js",
+        "line_number":  25,
+        "defect_category":  "Injection",
+        "severity":  "High",
+        "description":  "eval() with dynamic input",
+        "detected_text":  "const result = eval(expr);   // FIXME: never eval user input",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "b7190d64e367"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  49,
+        "defect_category":  "Security Misconfiguration",
+        "severity":  "High",
+        "description":  "Flask debug=True in production",
+        "detected_text":  "app.run(debug=True, host=\"0.0.0.0\")",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "559ae0125bff"
+    },
+    {
+        "file_path":  "sample_app/service.go",
+        "line_number":  21,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken MD5 hash",
+        "detected_text":  "h := md5.New()",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "5552b0f9576e"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  40,
+        "defect_category":  "Code Smell",
+        "severity":  "Low",
+        "description":  "print() used for logging",
+        "detected_text":  "print(f\"Running query: {query}\")",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "c233d7057a6f"
+    },
+    {
+        "file_path":  "sample_app/auth.py",
+        "line_number":  22,
+        "defect_category":  "Cryptography",
+        "severity":  "High",
+        "description":  "Use of broken SHA-1 hash",
+        "detected_text":  "return hashlib.sha1(token.encode()).hexdigest() == \"abc\"",
+        "timestamp":  "2026-10-07T02:58:53Z",
+        "_id":  "e1e8e1837b2c"
+    }
+]
